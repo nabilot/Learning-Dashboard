@@ -1,5 +1,5 @@
 ---
-title: "Untitled"
+title: "Dashboard1"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
@@ -11,7 +11,8 @@ library(flexdashboard)
 library(ggplot2)
 library(plotly)
 ```
-
+Graficos de caja 
+======================================================================
 Column {data-width=650}
 -----------------------------------------------------------------------
 
@@ -41,6 +42,19 @@ ggplotly (graficoB)
 ggplotly (
   ggplot(diamonds, aes(clarity, carat, fill = clarity)) +
   geom_boxplot()
+)
+```
+
+
+Graficos de dispercion
+=======================================================================
+Column 
+-----------------------------------------------------------------------
+### A
+```{r}
+ggplotly (
+  ggplot(diamonds, aes(carat,cut)) +
+    geom_point()
 )
 ```
 

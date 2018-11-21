@@ -1,0 +1,41 @@
+---
+title: "Untitled"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(ggplot2)
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+ggplot(diamonds, aes(cut,price, fill = cut)) +
+  geom_boxplot()
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+ggplot(diamonds, aes(clarity, price, fill = clarity)) +
+  geom_boxplot()
+
+```
+
+### Chart C
+
+```{r}
+ggplot(diamonds, aes(clarity, carat, fill = clarity)) +
+  geom_boxplot()
+```
+
